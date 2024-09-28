@@ -77,6 +77,38 @@ This project is a Simple Inventory Management System built using Django Rest Fra
       "email": "newuser@example.com"
     }
     ```
+    
+- **Token Authentication**:
+  - Register: `POST /api/token/`
+  - Example payload:
+    ```json
+    {
+      "username": "newuser",
+      "password": "newpassword"
+    }
+    ```
+     - Response:
+    ```json
+    {
+       "refresh": "refresh_token_here",
+       "access": "access_token_here"
+   }
+    ```
+
+- **Refresh Token**:
+  - Register: `POST /api/token/refresh/`
+  - Example payload:
+    ```json
+    {
+      "refresh": "refresh_token_here"
+    }
+    ```
+   - Response:
+   ```json
+    {
+      "access": "new_access_token_here"
+    }
+    ```
 
 - **Item Management**:
   - Retrieve items: `GET /api/items/`
