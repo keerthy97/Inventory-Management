@@ -13,9 +13,8 @@ This project is a Simple Inventory Management System built using Django Rest Fra
 
 ### Steps to Set Up:
 1. Clone the repository:
-   can clone the repository [here](https://github.com/keerthy97/Inventory-Management.git).
    ```bash
-   git clone
+   git clone https://github.com/keerthy97/Inventory-Management.git
    cd inventory-management-system
    ```
 
