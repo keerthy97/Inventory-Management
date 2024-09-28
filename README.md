@@ -103,10 +103,10 @@ This project is a Simple Inventory Management System built using Django Rest Fra
       "refresh": "refresh_token_here"
     }
     ```
-   - Response:
-     ```json
+  - Response:
+    ```json
     {
-      "access": "new_access_token_here"
+     "access": "new_access_token_here"
     }
     ```
 
