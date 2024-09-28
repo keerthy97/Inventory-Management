@@ -1,4 +1,3 @@
-# Inventory-Management
 # Inventory Management System
 
 ## Project Overview
