@@ -87,12 +87,12 @@ This project is a Simple Inventory Management System built using Django Rest Fra
       "password": "newpassword"
     }
     ```
-     - Response:
+  - Response:
     ```json
     {
-       "refresh": "refresh_token_here",
-       "access": "access_token_here"
-   }
+         "refresh": "refresh_token_here",
+         "access": "access_token_here"
+    }
     ```
 
 - **Refresh Token**:
@@ -104,7 +104,7 @@ This project is a Simple Inventory Management System built using Django Rest Fra
     }
     ```
    - Response:
-   ```json
+     ```json
     {
       "access": "new_access_token_here"
     }
