@@ -38,7 +38,19 @@ class ItemViewSet(viewsets.ModelViewSet):
         redis_conn.set(f'item_{pk}', json.dumps(serializer.data))
         logger.info(f'Fetched item {pk} from database and cached it')
         return Response(serializer.data)
+        
+    def create(self, request, *args, **kwargs):
+        serializer = ItemSerializer(data=request.data)
+        if serializer.is_valid():
+            item = serializer.save()
+            redis_conn = get_redis_connection("default")
+            redis_conn.set(f'item_{item.pk}', json.dumps(serializer.data))
+            logger.info(f'Created item {item.pk} and cached it successfully')
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
 
+        logger.warning(f'Failed to create item: {serializer.errors}')
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        
     def update(self, request, pk=None, partial=False):
         item = get_object_or_404(Item, pk=pk)
         serializer = ItemSerializer(item, data=request.data, partial=partial)
