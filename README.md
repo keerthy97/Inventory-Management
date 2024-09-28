@@ -13,23 +13,24 @@ This project is a Simple Inventory Management System built using Django Rest Fra
 
 ### Steps to Set Up:
 1. Clone the repository:
+   can clone the repository [here](https://github.com/keerthy97/Inventory-Management.git).
    ```bash
-   git clone [Link](https://github.com/keerthy97/Inventory-Management.git)
+   git clone
    cd inventory-management-system
    ```
 
-2. Create and activate a virtual environment:
+3. Create and activate a virtual environment:
    ```bash
    python -m venv env
    source env/bin/activate  # On Windows: env\Scripts\activate
    ```
 
-3. Install dependencies:
+4. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-4. Configure the database:
+5. Configure the database:
    - Create a PostgreSQL database and update `DATABASES` settings in `settings.py`:
      ```python
      DATABASES = {
@@ -44,23 +45,23 @@ This project is a Simple Inventory Management System built using Django Rest Fra
      }
      ```
 
-5. Run database migrations:
+6. Run database migrations:
    ```bash
    python manage.py migrate
    ```
 
-6. Set up Redis for caching:
+7. Set up Redis for caching:
    Ensure Redis is running on your machine:
    ```bash
    redis-server
    ```
 
-7. Create a superuser to access the Django admin:
+8. Create a superuser to access the Django admin:
    ```bash
    python manage.py createsuperuser
    ```
 
-8. Start the server:
+9. Start the server:
    ```bash
    python manage.py runserver
    ```
